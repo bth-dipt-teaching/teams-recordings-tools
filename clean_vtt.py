@@ -12,7 +12,7 @@ def process_vtt():
 
         # Remove UUID lines
         if re.match(
-            r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/[0-9]+-[0-9]+",
+            r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}(/[0-9]+-[0-9]+)?",
             line,
         ):
             continue
