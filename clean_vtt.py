@@ -10,6 +10,9 @@ def process_vtt():
         # Remove <v> tags from text lines
         line = re.sub(r"</?v[^>]*>", "", line)
 
+        # Remove &amp; entities text lines
+        line = re.sub(r"&amp;", "&", line)
+
         # Remove UUID lines
         if re.match(
             r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}(/[0-9]+-[0-9]+)?",
